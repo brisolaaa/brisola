@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cardápio - Tudo Gostoso Lanches</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f9f9f9;
+            margin: 0;
+            padding: 20px;
+        }
+
+        h1 {
+            text-align: center;
+            color: #000;
+        }
+
+        .menu-section {
+            margin-bottom: 20px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 20px;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        th, td {
+            border: 1px solid #ddd;
+            padding: 10px;
+        }
+
+        th {
+            background-color: #3d9931;
+            color: white;
+            border-radius: 8px 8px 0 0;
+        }
+
+        td {
+            text-align: center;
+        }
+
+        input[type="checkbox"] {
+            margin-right: 10px;
+        }
+
+        input[type="number"] {
+            width: 50px;
+            text-align: center;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+        }
+
+        input[type="submit"] {
+            display: block;
+            width: 100%;
+            padding: 10px;
+            background-color: #3d9931;
+            color: white;
+            border: none;
+            font-size: 16px;
+            cursor: pointer;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #2e7426;
+        }
+    </style>
+</head>
+<body>
+    <h1>Cardápio - Tudo Gostoso Lanches</h1>
+
+    <form action="resumo.php" method="POST">
+  
+        <div class="menu-section">
+            <h2>Lanches</h2>
+            <table>
+                <tr>
+                    <th>Imagem</th>
+                    <th>Lanches</th>
+                    <th>Quantidade</th>
+                    <th>Valor</th>
+                </tr>
+                <tr>
+                    <td><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRQlSfIjIJVhOQ2Flt-bcMxmPMPL_rZF3ugsA&s" alt="X-Burguer" width="100"></td>
+                    <td><input type="checkbox" name="lanche[]" value="X-Burguer"> X-Burguer</td>
+                    <td><input type="number" name="quantidade_burguer" min="0" value="0"></td>
+                    <td>R$ 8,30</td>
+                </tr>
+                <tr>
+                    <td><img src="https://crsupermercados.com.br/cdn/shop/files/MISTO-QUENTE.png?v=1717517432" alt="Misto Quente" width="100"></td>
+                    <td><input type="checkbox" name="lanche[]" value="Misto Quente"> Misto Quente</td>
+                    <td><input type="number" name="quantidade_misto" min="0" value="0"></td>
+                    <td>R$ 7,00</td>
+                </tr>
+                <tr>
+                    <td><img src="https://static.codepill.com.br/domains/7e4e09e5-31af-44d5-bd1e-428319709832/products/gallery_6a868b45-ddf4-4a4f-b030-dd9172b363fb.jpg" alt="X-Salada" width="100"></td>
+                    <td><input type="checkbox" name="lanche[]" value="X-Salada"> X-Salada</td>
+                    <td><input type="number" name="quantidade_salada" min="0" value="0"></td>
+                    <td>R$ 8,90</td>
+                </tr>
+                <tr>
+                    <td><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRc_YzBklvrzLrfqLgUpx4u5k16ziJyorozHQ&s" alt="X-Bacon" width="100"></td>
+                    <td><input type="checkbox" name="lanche[]" value="X-Bacon"> X-Bacon</td>
+                    <td><input type="number" name="quantidade_bacon" min="0" value="0"></td>
+                    <td>R$ 9,50</td>
+                </tr>
+            </table>
+        </div>
+
+
+        <div class="menu-section">
+            <h2>Bebidas</h2>
+            <table>
+                <tr>
+                    <th>Imagem</th>
+                    <th>Bebidas</th>
+                    <th>Quantidade</th>
+                    <th>Valor</th>
+                </tr>
+                <tr>
+                    <td><img src="https://crsupermercados.com.br/cdn/shop/files/coca_350ml_800x.png?v=1700754095" alt="Coca-Cola" width="100"></td>
+                    <td><input type="checkbox" name="bebida[]" value="Coca-Cola"> Coca-Cola</td>
+                    <td><input type="number" name="quantidade_coca" min="0" value="0"></td>
+                    <td>R$ 6,00</td>
+                </tr>
+                <tr>
+                    <td><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS7Snrecz-ppyNRNUqx_5cAyoaW43-10Yv6zg&s" alt="Fanta" width="100"></td>
+                    <td><input type="checkbox" name="bebida[]" value="Fanta"> Fanta</td>
+                    <td><input type="number" name="quantidade_fanta" min="0" value="0"></td>
+                    <td>R$ 5,00</td>
+                </tr>
+                <tr>
+                    <td><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSM7d3Aid21vGkO3V-V1Qt3kpddbuJkHZelsQ&s" alt="Conquista" width="100"></td>
+                    <td><input type="checkbox" name="bebida[]" value="Conquista"> Conquista</td>
+                    <td><input type="number" name="quantidade_conquista" min="0" value="0"></td>
+                    <td>R$ 5,50</td>
+                </tr>
+            </table>
+        </div>
+
+       
+        <div class="menu-section">
+            <h2>Doces</h2>
+            <table>
+                <tr>
+                    <th>Imagem</th>
+                    <th>Doces</th>
+                    <th>Quantidade</th>
+                    <th>Valor</th>
+                </tr>
+                <tr>
+                    <td><img src="https://www.marajoaraalimentos.com.br/2018/wp-content/uploads/2020/07/349-scaled.jpg" alt="Brigadeiro" width="100"></td>
+                    <td><input type="checkbox" name="doce[]" value="Brigadeiro"> Brigadeiro</td>
+                    <td><input type="number" name="quantidade_brigadeiro" min="0" value="0"></td>
+                    <td>R$ 2,50</td>
+                </tr>
+                <tr>
+                    <td><img src="https://assets.tmecosys.com/image/upload/t_web767x639/img/recipe/ras/Assets/bea72b78-1432-4a61-91b0-41cffad5f9a1/Derivates/658eb940-1003-4f6b-8d17-91e63e522ee5.jpg" alt="Cocada" width="100"></td>
+                    <td><input type="checkbox" name="doce[]" value="Cocada"> Cocada</td>
+                    <td><input type="number" name="quantidade_cocada" min="0" value="0"></td>
+                    <td>R$ 3,00</td>
+                </tr>
+                <tr>
+                    <td><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQqNESr7Ka01FDREEzHsleaRb5UdqOMBm8SLQ&s" alt="Beijinho" width="100"></td>
+                    <td><input type="checkbox" name="doce[]" value="Beijinho"> Beijinho</td>
+                    <td><input type="number" name="quantidade_beijinho" min="0" value="0"></td>
+                    <td>R$ 2,50</td>
+                </tr>
+            </table>
+        </div>
+
+        <div class="menu-section">
+            <h2>Porções</h2>
+            <table>
+                <tr>
+                    <th>Imagem</th>
+                    <th>Porções</th>
+                    <th>Quantidade</th>
+                    <th>Valor</th>
+                </tr>
+                <tr>
+                    <td><img src="https://www.tendaatacado.com.br/dicas/wp-content/uploads/2022/06/como-fazer-batata-frita-topo.jpg" alt="Batata Frita" width="100"></td>
+                    <td><input type="checkbox" name="porcao[]" value="Batata Frita"> Batata Frita</td>
+                    <td><input type="number" name="quantidade_batata" min="0" value="0"></td>
+                    <td>R$ 12,00</td>
+                </tr>
+                <tr>
+                    <td><img src="https://img.cybercook.com.br/receitas/798/porcao-de-calabresa-com-cebola-no-grill-1.jpeg?w=350&h=230&fit=crop" alt="Porção de Calabresa" width="100"></td>
+                    <td><input type="checkbox" name="porcao[]" value="Porção de Calabresa"> Porção de Calabresa</td>
+                    <td><input type="number" name="quantidade_calabresa" min="0" value="0"></td>
+                    <td>R$ 15,00</td>
+                </tr>
+                <tr>
+                    <td><img src="https://i.pinimg.com/originals/04/98/0f/04980fcbdedff10d88d6ebc94ec54b43.png" alt="Porção de Frango a Passarinho" width="100"></td>
+                    <td><input type="checkbox" name="porcao[]" value="Frango a Passarinho"> Porção de Frango a Passarinho</td>
+                    <td><input type="number" name="quantidade_frango" min="0" value="0"></td>
+                    <td>R$ 18,00</td>
+                </tr>
+            </table>
+        </div>
+
+        <input type="submit" value="Finalizar Pedido">
+    </form>
+</body>
+</html>
